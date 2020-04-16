@@ -1,13 +1,13 @@
 import random
 
-NUMS_PER_LINE = 6
+NUMS_PER_DRAW = 6
 MIN_NUMBER = 1
 MAX_NUMBER = 45
 
 
 def main():
-    print("Enter your number of Quick Pick(s) for the Gold Lotto lottery")
-    print("which uses {} numbers, the highest of which is {}.".format(NUMS_PER_LINE, MAX_NUMBER))
+    print("Enter your number of Quick Pick(s) for the Gold Lotto lottery,")
+    print("which uses {} numbers ranged from {} to {}.".format(NUMS_PER_DRAW, MIN_NUMBER, MAX_NUMBER))
     quick_picks = int(input("Number of Quick Picks: "))
     while quick_picks < 1:
         print("No sense to pick zero or negative numbers of Quick Picks!")
@@ -17,7 +17,7 @@ def main():
     print("Here are your {} lottery tickets: ".format(quick_picks))
     for i in range(quick_picks):
         quick_pick = []
-        for j in range(NUMS_PER_LINE):
+        for j in range(NUMS_PER_DRAW):
             numbers = random.randint(MIN_NUMBER, MAX_NUMBER)
             while numbers in quick_pick:
                 numbers = random.randint(MIN_NUMBER, MAX_NUMBER)
