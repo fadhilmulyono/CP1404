@@ -16,7 +16,7 @@ def main():
         email = input("Enter your email: ")
 
     for email, name in email_to_name.items():
-        print ("{} ({})".format(name, email))
+        print("{} ({})".format(name, email))
 
 
 def get_name(email):
